@@ -166,7 +166,6 @@ export interface ExperimentalConfig {
   middlewarePrefetch?: 'strict' | 'flexible'
   legacyBrowsers?: boolean
   manualClientBasePath?: boolean
-  newNextLinkBehavior?: boolean
   // custom path to a cache handler to use
   incrementalCacheHandlerPath?: string
   disablePostcssPresetEnv?: boolean
@@ -712,7 +711,6 @@ export const defaultConfig: NextConfig = {
     optimisticClientCache: true,
     manualClientBasePath: false,
     legacyBrowsers: false,
-    newNextLinkBehavior: true,
     cpus: Math.max(
       1,
       (Number(process.env.CIRCLE_NODE_TOTAL) ||
